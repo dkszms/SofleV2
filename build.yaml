@@ -24,7 +24,7 @@ include:
   # -----------------------------------------
   # Change the board appropriately, you can use any board
   # - board: seeeduino_xiao_ble
-  #   shield: lily58_dongle
+  #   shield: sofle_v2_dongle
   # - board: seeeduino_xiao_ble
   #   shield: settings_reset
 
