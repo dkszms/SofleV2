@@ -14,7 +14,10 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/pointing.h> // 마우스 기능 추가
 
-
+// Encoders
+&sensors        { triggers-per-rotation = <30>; };
+&left_encoder   { resolution = <1>; };
+&right_encoder  { resolution = <1>; };
 
 
 / {
