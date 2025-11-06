@@ -4,7 +4,6 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zephyr,display = &display;
     };
 
     mock_kscan: mock_kscan_0 {
