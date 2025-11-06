@@ -1,3 +1,4 @@
+#include "sofle_v2.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
