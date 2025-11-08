@@ -1,3 +1,4 @@
+#include "sofle_v2.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
@@ -77,3 +78,8 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         prechargep = <0x22>;
     };
 };
+
+//dongle엔 인코더가 없다.
+&left_encoder { status = "disabled"; };
+&right_encoder { status = "disabled"; };
+&sensors { status = "disabled"; };
