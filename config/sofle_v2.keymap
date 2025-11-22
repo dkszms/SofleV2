@@ -51,7 +51,7 @@
     //// 탭댄스 ////
         lang_tog3: lang_tog3 {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;[]
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&lang_cap>, <&tog 3>;
         };
@@ -65,7 +65,7 @@
 
         mo1_mo2: mo1_mo2 {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;[]
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 1>, <&mo 2>;
         };
