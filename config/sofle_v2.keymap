@@ -14,8 +14,22 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/pointing.h> // 마우스 기능 추가
 
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_LBRC {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindiniogs = <&kp LBRC>;
+        };
 
-
+        combo_RBRC {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindiniogs = <&kp RBRC>;
+        };
+    };
+};
 
 / {
     behaviors {
@@ -88,20 +102,7 @@
     };
 
 
-    combos {
-        compatible = "zmk,combos";
-        combo_LBRC {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindiniogs = <&kp LBRC>;
-        };
 
-        combo_RBRC {
-            timeout-ms = <50>;
-            key-positions = <7 8>;
-            bindiniogs = <&kp RBRC>;
-        };
-    };
     
     keymap {
         compatible = "zmk,keymap";
