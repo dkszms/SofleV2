@@ -29,7 +29,8 @@ include:
   #   shield: settings_reset
 
   - board: nice_nano
-    shield: sofle_v2_central_dongle dongle_display
+    shield: sofle_v2_central_dongle
+    #shield: sofle_v2_central_dongle dongle_display
 
   - board: nice_nano
     shield: settings_reset
