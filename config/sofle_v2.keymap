@@ -27,29 +27,31 @@
             mods = <(MOD_RSFT)>;
         };
 
-        // lang_cap 1단계: Ctrl에 따른 분기 (lang_cap 이전 처리)
-        ctrl_hanja: ctrl_hanja {
+        // lang_cap 1단계: Ctrl에 따른 분기 
+        // (Hangeul, CapsLock)
+        // 컨트롤 누름 여부에 따라 한/영 또는 Capslock 입력
+        lang_cap:  lang_capslock {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp CAPS>, <&kp LANG_HANJA>;  
+            bindings = <&kp LANG_HANGEUL>, <&caps_hanja>;
             mods = <(MOD_LCTL)>;
         };
 
         // lang_cap 2단계: Shift에 따른 분기
-        // (Hangeul, CapsLock)
-        // 쉬프트 누름 여부에 따라 한/영 또는 Capslock 입력
-        lang_cap:  lang_capslock {
+        caps_hanja: caps_hanja {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LANG_HANGEUL>, <&ctrl_hanja>;
+            bindings = <&kp CAPS>, <&kp LANG_HANJA>;  
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+
 
     //// 탭댄스 ////
         lang_tog3: lang_tog3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             bindings = <&lang_cap>, <&tog 3>;
         };
 
