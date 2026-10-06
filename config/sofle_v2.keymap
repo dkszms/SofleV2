@@ -85,11 +85,65 @@
         
     
     };
-    
 
+    //// 콤보 ////
+    // 홈로우 두 키를 동시에 눌러 괄호 입력
+    // key-positions 번호는 keymap 의 키 순서(0부터, 왼쪽→오른쪽, 위→아래)
+    // 홈로우(3번째 줄): 24=CTRL 25=A 26=S 27=D 28=F 29=G | 30=H 31=J 32=K 33=L 34=; 35='
+    // timeout-ms: 두 키를 이 시간(ms) 안에 눌러야 콤보로 인식
+    // layers: 기본 레이어(0)에서만 동작 (마우스/숫자 레이어 등에서 오작동 방지)
+    combos {
+        compatible = "zmk,combos";
 
+        // F + D -> (
+        combo_lpar {
+            timeout-ms = <30>;
+            key-positions = <28 27>;
+            bindings = <&kp LPAR>;
+            layers = <0>;
+        };
 
-    
+        // D + S -> {
+        combo_lbrc {
+            timeout-ms = <30>;
+            key-positions = <27 26>;
+            bindings = <&kp LBRC>;
+            layers = <0>;
+        };
+
+        // S + A -> [
+        combo_lbkt {
+            timeout-ms = <30>;
+            key-positions = <26 25>;
+            bindings = <&kp LBKT>;
+            layers = <0>;
+        };
+
+        // J + K -> )
+        combo_rpar {
+            timeout-ms = <30>;
+            key-positions = <31 32>;
+            bindings = <&kp RPAR>;
+            layers = <0>;
+        };
+
+        // K + L -> }
+        combo_rbrc {
+            timeout-ms = <30>;
+            key-positions = <32 33>;
+            bindings = <&kp RBRC>;
+            layers = <0>;
+        };
+
+        // L + ; -> ]
+        combo_rbkt {
+            timeout-ms = <30>;
+            key-positions = <33 34>;
+            bindings = <&kp RBKT>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
